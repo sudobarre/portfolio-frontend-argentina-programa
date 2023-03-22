@@ -1,0 +1,85 @@
+.edu {
+  padding: 20px;
+}
+
+h1 {
+  font-style: oblique;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.titles {
+  color: antiquewhite;
+}
+h1,
+h3,
+h2,
+h6 {
+  color: rgb(216, 216, 216);
+  display: inline;
+}
+p {
+  color: rgb(141, 139, 139);
+  text-align: left;
+}
+img {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+hr {
+  border: 1px solid rgb(179, 177, 177);
+  width: 80%;
+  margin-left: 10%;
+}
+.card {
+  flex-direction: column;
+  align-items: center;
+  max-width: 90%;
+  background-color: #0f223a;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.card-title {
+  color: rgb(22, 21, 21);
+  margin: auto;
+}
+code {
+  text-align: center;
+  font-size: 24px;
+}
+.modal-header {
+  background-color: #4b4b4b;
+}
+.modal-body {
+  background-image: linear-gradient(to top, #3b3b3b, #89898a);
+}
+.modal-footer {
+  border-top: 0px;
+}
+.btn {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.modal {
+  color: aliceblue;
+}
+.spinner {
+  margin: 0 auto;
+  width: 3rem;
+  height: 3rem;
+  color: blanchedalmond;
+}

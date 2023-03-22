@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  background-color: black;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+}
+
+.card {
+  background: linear-gradient(
+    135deg,
+    #0b4c81,
+    #073a63,
+    #062c4b,
+    #06253f,
+    #041b2e
+  );
+  background-size: 500%;
+  animation: move 10s infinite;
+  -webkit-animation: move 10s infinite;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

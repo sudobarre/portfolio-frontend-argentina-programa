@@ -1,0 +1,38 @@
+* {
+  color: rgb(241, 241, 241);
+}
+i {
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.navbar {
+  margin-right: 0;
+  width: 100%;
+  height: 70px;
+}
+
+#myModal {
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.modal-header {
+  background-color: #4b4b4b;
+}
+.modal-body {
+  background-image: linear-gradient(to top, #3b3b3b, #89898a);
+}
+.modal-footer {
+  border-top: 0px;
+}
+.btn {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}

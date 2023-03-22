@@ -1,0 +1,117 @@
+.info {
+  margin: auto;
+  padding: 20px;
+}
+
+.card {
+  border-radius: 20px;
+}
+.about h1 {
+  padding-top: 30px;
+  font-style: oblique;
+  font-size: 26px;
+}
+.about {
+  margin-left: 60px;
+  color: rgb(255, 255, 255);
+}
+.p-profile img {
+  margin-left: 70px;
+  max-width: 100%;
+  width: 85%;
+  border-radius: 50%;
+  box-shadow: rgb(44, 43, 43);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.name {
+  color: rgb(255, 255, 255);
+  padding-top: 30px;
+  padding-left: 70px;
+  font-style: italic;
+}
+hr {
+  border: 1px solid rgb(255, 255, 255);
+  width: 100%;
+}
+
+.p-tag {
+  border-radius: 10px;
+  background: linear-gradient(to top, #0c0c0c, #848486);
+  color: rgb(2, 2, 2);
+  margin-left: 70px;
+  font-size: 16px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.p-tag:hover {
+  background: linear-gradient(to top, #848486, #383838);
+}
+.perfil {
+  border-radius: 20px;
+}
+
+/* tag */
+.word {
+  color: #0c0c0c;
+  font-size: 24px;
+  animation: flash 3s linear infinite;
+  -webkit-animation: flash 3s linear infinite;
+}
+@keyframes flash {
+  0% {
+    color: rgb(175, 170, 170);
+    text-shadow: 0 0 7px #9b9999;
+  }
+  90% {
+    color: #7e7b7b;
+    text-shadow: none;
+  }
+  100% {
+    color: #9b9a9a;
+    text-shadow: 0 0 7px #9b9696;
+  }
+}
+
+.lettre:nth-child(1) {
+  animation-delay: 0.9s;
+}
+
+.fondu-out {
+  opacity: 0.5;
+  transition: opacity 0.4s ease-out;
+  -webkit-transition: opacity 0.4s ease-out;
+  -moz-transition: opacity 0.4s ease-out;
+  -ms-transition: opacity 0.4s ease-out;
+  -o-transition: opacity 0.4s ease-out;
+}
+
+.modal-header {
+  background-color: #4b4b4b;
+}
+.modal-body {
+  background-image: linear-gradient(to top, #3b3b3b, #89898a);
+}
+.modal-footer {
+  border-top: 0px;
+}
+.btn {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.modal {
+  color: aliceblue;
+}
+.spinner {
+  margin: 0 auto;
+  width: 3rem;
+  height: 3rem;
+  color: blanchedalmond;
+}
