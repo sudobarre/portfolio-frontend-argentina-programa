@@ -1,0 +1,13 @@
+<app-navbar></app-navbar>
+
+<span *ngIf="isLoggedIn">
+    <app-header></app-header>
+    <app-education></app-education>
+    <app-experience></app-experience>
+    <app-skills></app-skills>
+    <app-project></app-project>
+</span>
+<span *ngIf="!isLoggedIn">
+    <app-unauthorized></app-unauthorized>
+</span>
+<app-footer></app-footer>

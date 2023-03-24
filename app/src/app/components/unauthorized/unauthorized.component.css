@@ -1,0 +1,6 @@
+.wrapper {
+    min-height: calc(100vh - 80px); /* 80px is the height of your navbar */
+    display: flex;
+    flex-direction: column;
+  }
+  

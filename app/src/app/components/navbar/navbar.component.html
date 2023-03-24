@@ -1,0 +1,287 @@
+<nav class="navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img
+        src="https://i.postimg.cc/2jb4t5zJ/APLogo-20-20.png"
+        style="color: #ffffff"
+        width="130px"
+      />
+      <code>#YoProgramo</code>
+    </a>
+    <div class="nav justify-content-end" id="navbarTogglerDemo03">
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            href="https://github.com/sudobarre"
+            target="blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            href="https://www.linkedin.com/in/fede-barrena-663494a2/"
+            target="blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </li>
+        <li *ngIf="!isLogged" class="nav-item">
+          <a
+            data-bs-toggle="modal"
+            data-bs-target="#login"
+            class="nav-link active"
+            class="btn tooltips"
+            data-placement="top"
+            data-toggle="tooltip"
+            data-original-title="Edit"
+            ><i class="fa-solid fa-user"></i>
+          </a>
+        </li>
+        <li *ngIf="isLogged" class="nav-item">
+          <a
+            (click)="handleClear()"
+            (click)="logout()"
+            class="nav-link active"
+            class="btn tooltips"
+            ><i class="fa-solid fa-arrow-right-from-bracket"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Login modal-->
+<div class="modal fade bd-example-modal-lg" id="login">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="border-radius: 20px">
+      <div class="modal-header">
+        <h5 class="modal-title">Login</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="form" class="m-5" (ngSubmit)="onEnviar($event)">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"
+              >Username</label
+            >
+            <input
+              formControlName="username"
+              [ngClass]="{
+                'is-invalid': this.form.get('username')?.errors && this.form.get('username')?.touched
+              }"
+              style="color: black;"
+              type="username"
+              class="form-control"
+              id="exampleFormControlInput1"
+              placeholder="test"
+              autocomplete="off"
+              required
+            />
+            <div *ngIf="this.form.get('username')?.errors && this.form.get('username')?.touched">
+              <p *ngIf="Email?.hasError('required')" class="text-danger">
+                El nombre de usuario es requerido
+              </p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"
+              >Contraseña</label
+            >
+            <input
+              [ngClass]="{
+                'is-invalid': Password?.errors && Password?.touched
+              }"
+              style="color: black;"
+              formControlName="password"
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+              placeholder="1234"
+              autocomplete="off"
+              required
+            />
+            <div *ngIf="Password?.errors && Password?.touched">
+              <p
+                *ngIf="Password?.hasError('required')"
+                style="color: black"
+                class="text-danger"
+              >
+                El password es requerido
+              </p>
+            </div>
+          </div>
+          <button
+            id="btnCerrar"
+            type="submit"
+            class="btn btn-primary"
+            data-bs-dismiss="modal"
+          >
+            Enviar
+          </button>
+          <span style="padding-left: 10px; padding-right: 5px;">o</span>
+          <a
+          data-bs-toggle="modal"
+          data-bs-target="#signup"
+          class="nav-link active"
+          class="btn tooltips"
+          data-placement="top"
+          data-toggle="tooltip"
+          data-original-title="Edit"
+          >Registrarse
+        </a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Signup modal-->
+<div class="modal fade bd-example-modal-lg" id="signup">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="border-radius: 20px">
+      <div class="modal-header">
+        <h5 class="modal-title">Sign up</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="signupForm" class="m-5" (ngSubmit)="onSignup($event)">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"
+              >Email</label
+            >
+            <input
+              formControlName="email"
+              [ngClass]="{
+                'is-invalid': signupForm.get('email')?.errors && signupForm.get('email')?.touched,
+                'is-valid': !signupForm.get('email')?.errors && signupForm.get('email')?.touched
+              }"
+              style="color: black;"
+              type="email"
+              class="form-control"
+              id="exampleFormControlInput1"
+              placeholder="Email"
+              autocomplete="off"
+              required
+            />
+            <div *ngIf="signupForm.get('email')?.errors && signupForm.get('email')?.touched">
+              <p *ngIf="signupForm.get('email')?.hasError('required')" class="text-danger">
+                El email es requerido
+              </p>
+              <p *ngIf="signupForm.get('email')?.hasError('email')" class="text-danger">
+                El formato del email debe ser valido
+              </p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"
+              >Nombre de usuario</label
+            >
+            <input
+              formControlName="username"
+              [ngClass]="{
+                'is-invalid': signupForm.get('username')?.errors && signupForm.get('username')?.touched,
+                'is-valid': !signupForm.get('username')?.errors && signupForm.get('username')?.touched
+              }"
+              style="color: black;"
+              type="username"
+              class="form-control"
+              id="exampleFormControlInput1"
+              placeholder="username"
+              autocomplete="off"
+              required
+            />
+            <div *ngIf="signupForm.get('username')?.errors && signupForm.get('username')?.touched">
+              <p *ngIf="signupForm.get('username')?.hasError('required')" class="text-danger">
+                El nombre de usuario es requerido
+              </p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"
+              >Contraseña</label
+            >
+            <input
+              [ngClass]="{
+                'is-invalid': signupForm.get('password')?.errors && signupForm.get('password')?.touched,
+                'is-valid': !signupForm.get('password')?.errors && signupForm.get('password')?.touched
+              }"
+              style="color: black;"
+              formControlName="password"
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+              placeholder="Password"
+              autocomplete="off"
+              required
+            />
+            <div *ngIf="
+            (signupForm.get('password')?.dirty ||
+              signupForm.get('password')?.touched) &&
+            signupForm.get('password')?.invalid
+          ">
+              <p
+                *ngIf="Password?.hasError('required')"
+                style="color: black"
+                class="text-danger"
+              >
+                El password es requerido
+              </p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"
+              >Repetir Contraseña</label
+            >
+            <input
+              [ngClass]="{
+                'is-invalid': signupForm.get('confirmPassword')?.errors && signupForm.get('confirmPassword')?.touched,
+                'is-valid': !signupForm.get('confirmPassword')?.errors && signupForm.get('confirmPassword')?.touched
+              }"
+              style="color: black;"
+              formControlName="repeatPassword"
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+              placeholder="Repetir Contraseña"
+              autocomplete="off"
+              required
+            />
+            <div  *ngIf="
+            signupForm.get('confirmPassword')?.touched &&
+            signupForm.hasError('mismatch', ['confirmPassword'])
+          ">
+              <p
+                *ngIf="signupForm.hasError('mismatch', ['confirmPassword'])"
+                style="color: black"
+                class="text-danger"
+              >
+                Passwords do not match
+              </p>
+            </div>
+          </div>
+          <button
+            id="btnCerrar"
+            type="submit"
+            class="btn btn-primary"
+            data-bs-dismiss="modal"
+            [disabled]="!signupForm.valid"
+          >
+            Registrame
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
