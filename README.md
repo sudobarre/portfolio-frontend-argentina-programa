@@ -1,28 +1,41 @@
-# Frontap
+<h3 align="center">Portfolio para Argentina Programa</h3>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
+<div align="center">
 
-## Development server
+  [![Status](https://img.shields.io/badge/status-active-success.svg)]() 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+</div>
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<p align="center"> Frontend para el proyecto final de la 2da etapa de Argentina Programa.
+    <br> 
+</p>
 
-## Build
+## 📝 Table of Contents
+- [About](#about)
+- [Getting Started](#getting_started)
+- [Deployment](#deployment)
+- [Built Using](#built_using)
+- [Authors](#authors)
+- [Acknowledgments](#acknowledgement)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 🧐 About <a name = "about"></a>
+EL backend esta disponible <a href="https://github.com/sudobarre/portfolio-backend-argentina-programa">aca</a>. Para ver el sitio en vivo, visita https://ap-portfolio-frontend-4cfb0.web.app/portfolio
 
-## Running unit tests
+<p>Esta app esta hecha en Angular 13, y Bootstrap. Usa un HTTP-Only JWT para mejor seguridad, y tambien tiene un Refresh Token. Este frontend fue hecho con Bootstrap (y amor(?) ). Posee un login de Test para los usuarios que no quieren registrarse. Para registrarse, se envia un mail a la casilla que indica el usuario, y su cuenta se habilita cuando entran al link de verificacion.</p>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🏁 Getting Started <a name = "getting_started"></a>
+Clonar este repo, luego hacer ```npm i```, y luego ```ng s```. El sitio se vera en localhost:4200
+### Prerequisites
+<ul>
+  <li>Angular 13.</li>
+</ul>
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 🚀 Deployment <a name = "deployment"></a>
+Hice el deploy en <a href='https://firebase.google.com/'>Firebase</a>, usando su CLI. Esta configurada para hacer autodeploy en cada cambio a la rama main.
 
-## Further help
+## ✍️ Author <a name = "author"></a>
+- [@sudobarre](https://github.com/sudobarre)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# portfolio-frontend-argentina-programa
